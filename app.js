@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
         postData = req.body;
         res.sendFile(__dirname + "/index.html");
     });
-    app.get(/\/stylesheets*|\/script*|\/node_modules*/, function(req, res) {
+    app.get(/\w+/, function(req, res) {
         console.log("Request string: " + req.url);
         postData = req.body;
         res.sendFile(__dirname + req.url);

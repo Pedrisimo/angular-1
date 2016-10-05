@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Add person</title>
+</head>
+<body ng-app="app">
+<form role="form">
+	
+	<div class="col-xs-4">
+     <a ui-sref=".list" class="btn btn-primary">List</a>
+		<br><br>
+ <div class="form-group">
+  <label for="name">Name</label>
+  <input type="name" class="form-control input-sm" id="name" placeholder="Enter name">
+ </div>
+ <div class="form-group">
+  <label for="email">Email</label>
+  <input type="email" class="form-control" id="email" placeholder="Enter email">
+ </div>
+ <div class="form-group">
+  <label for="phone">Phone</label>
+  <input type="phone" class="form-control" id="phone" placeholder="Enter phone">
+ </div>
+     <div class="container">
+      <div ui-view></div>
+     </div>
+</div>
+</form>
+</body>
+</html>

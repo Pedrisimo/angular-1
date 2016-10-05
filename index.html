@@ -1,37 +1,15 @@
 <!DOCTYPE html>
-<html ng-app = 'app' ng-controller="Todo">
+<html>
 <head>
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <title>Add new person</title>
+    <script src = "/script/angular.min.js"></script>
+    <script src="/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src = "/script/application.js"></script>  
 </head>
-<div>
-<div class="text-right">
-<button type="button" class="btn btn-primary btn-lg">Add</button>
-</div>
-<br><br><br>
-<div class="form" id="form">
-    <table class="table table-hover">
-        <thead>
-        <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Phone</th>
-            <th>Email</th>
-        </tr>
-        <tr ng-repeat="user in todo.users">
-            <td>{{user.id}}</td>
-            <td>{{user.name}}</td>
-            <td>{{user.phone}}</td>
-            <td>{{user.email}}</td>
-        </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
-</div>
+<body ng-app="app">
+<div class="container">
+    <div ui-view></div>
 
-<!--script src="/public/script/script.js"></script-->
-<script src = "/script/angular.min.js"></script>
-<script src = "/script/application.js"></script>
+</div>
 </body>
 </html>
