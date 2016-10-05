@@ -1,4 +1,4 @@
-    let routeApp = angular.module('app', ['ui.router']);
+    let routeApp = angular.module('routeApp', ['ui.router']);
 
     routeApp.config(function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/add');
@@ -7,12 +7,11 @@
             url: '/add',
             templateUrl: 'add-user.html'
         })
-                .state('add.list', {
+                .state('list', {
             url: '/list',
             templateUrl: 'user-list.html'
         });
     });
-    /*
     ang.controller('Todo', Todo);
     function Todo($scope, model) {
         $scope.todo = model;
@@ -24,4 +23,3 @@
             {id: '3', name: 'Egor', phone: '+375259645656', email: 'kapowdeveloper@gmail.com'}
         ]
     });
-        */
